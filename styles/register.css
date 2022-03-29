@@ -1,0 +1,200 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:50px;
+}
+
+
+.dash-container {
+    max-width: 1200px !important;
+    min-width:1200px !important;
+     
+}
+
+    .dash-container .page-header.module-content {
+        margin-top: 0px !important;
+    }
+
+    .dash-container header svg{
+        margin-right:10px;
+    }
+
+.content-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 13px;
+    margin: 30px;
+    padding:20px;
+}
+.dashboard {
+    border: 1px solid #F6F6F6;
+}
+
+    .dashboard .page_primary_action{
+        margin-bottom:0px;
+    }
+
+    .dashboard span {
+        line-height: 1.8;
+    }
+
+    .dashboard .blue-span {
+        color: #008ECD;
+    }
+    @media (min-width: 768px) {
+        .container {
+        width: 750px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .dash-container {
+        max-width: 750px !important;
+        min-width: 750px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .dash-container {
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+
+
+
+.register-form-container h4{
+    font-weight:normal;
+}
+
+
+.register-form-container{
+    max-width:600px;
+    margin:auto;
+ }
+
+ textarea {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+    
+}
+
+.center-container{
+    width:450px;
+    text-align: left;
+    margin:auto;
+    margin-top:100px;
+}
+
+.center-container h4{
+    font-weight: normal;
+}
+
+.center-container a{
+    color:#087CE2;
+    text-decoration: underline;
+}
+
+.df{
+    align-items: center;
+    display: flex;
+}
+
+.df svg{
+    margin-left:5px;
+}
+
+.reg-details{
+    padding-right:25px;
+}
+
+.login-form input,textarea.form-control{
+    width:calc(100% - 25px);
+    max-width:calc(100% - 25px);
+    min-width:calc(100% - 25px);
+}
+
+.__react_component_tooltip{
+width: 207px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 800;
+font-size: 13px;
+line-height: 150%;
+/* or 20px */
+
+background: #FFFFFF;
+box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
+
+color: #000000;
+padding:14px;
+}
+
+.blue-btn{
+    padding: 8px 16px;
+
+    background: #0E0060;
+     border-radius: 50px;
+     color:white;
+     border:none; 
+}
+
+.white-btn {
+    padding: 8px 16px;
+    background: white;
+    border-radius: 50px;
+    color: black;
+    border: 1px solid black;
+}
+
+.inactive-btn{
+opacity: 0.4;
+}
+
+.active-btn{
+    opacity: 1; 
+}
+
+.tab{
+    background-color:white;
+    padding:10px 20px;
+}
+
+.reg-dashboard-div{
+   border:1px solid black;
+   width:100%;
+   padding:0px;
+}
+
+@media(max-width:768px) {
+    .register-form-container{
+        max-width:500px;
+        margin:auto;
+    }
+ }
