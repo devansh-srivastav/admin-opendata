@@ -5,21 +5,24 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 import ReactTooltip from "react-tooltip";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 export default function Home() {
     
    
   let router=useRouter();
-  const apiUrl = "http://localhost:3100/api/";
+   const apiUrl = "http://localhost:3100/api/";
+   // const apiUrl = "https://registerbackend.opendatabayern.de/api/";
     const [data, setData] = useState([]);
-
+    const [loading, setLoad] = useState(false);
 
     const setInfo = (i)  => {
       localStorage.setItem('data',JSON.stringify(data[i]));
       router.push('/detail')
   };
 
-    useEffect(()=>{
+    useEffect(() => {
+        setLoad(true)
       if(window) {
           if(!sessionStorage.getItem('loggedIn') || sessionStorage.getItem('loggedIn')=='no')
            { router.push('/');}
@@ -31,11 +34,11 @@ export default function Home() {
 
            let res= axios.get(apiUrl + "requests").then((res) => {
                     if (res.status == 200) {
-                      console.log(res)
-                        setData([...res.data.result]);
-                                
+                       setData([...res.data.result]);
+                        setLoad(false)
                            }
-                        }).catch((err) => {
+           }).catch((err) => {
+               setLoad(false)
                             window.alert(err)
                         })
     },[]);
@@ -48,11 +51,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="container dash-container">
-          <div className="dashboard">
-            <header className="module-content page-header hug">
-              <ul className="nav nav-tabs">
-                {console.log(data)}
+              <div className="container dash-container">
+                
+                  <div className="dashboard">
+                   
+               <header className="module-content page-header hug">
+              <ul className="nav nav-tabs">  
                 <li className="tab">
                   <svg
                     width="14"
@@ -71,7 +75,8 @@ export default function Home() {
                 </li>
               </ul>
             </header>
-                    
+                      <div className="login-loader" style={loading ? { opacity: 1 } : { opacity: 0 }}> <Image src="/loader.gif" width="35" height="35" alt="" /></div>
+
                       {data.map((data,index)=>{
                            return(<div className="module-content content-card" id={index} onClick={()=>setInfo(index)}>
                            <div className="page_primary_action">

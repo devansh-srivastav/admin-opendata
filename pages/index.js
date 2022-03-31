@@ -5,10 +5,11 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import ReactTooltip from 'react-tooltip';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 export default function Home() {
     let router=useRouter();
-    //const apiUrl = "https://registerbackend.opendatabayern.de/api/";
+ //const apiUrl = "https://registerbackend.opendatabayern.de/api/";
 const apiUrl = "http://localhost:3100/api/";
 
     const [query, setQuery] = useState({
@@ -16,7 +17,7 @@ const apiUrl = "http://localhost:3100/api/";
         password: "",
     });
 
-
+    const [loading, setLoad] = useState(false);
     const [change, setChange] = useState(false);
     const [valid, setValid] = useState(false);
     const handleChange = () => (e) => {
@@ -34,18 +35,23 @@ const apiUrl = "http://localhost:3100/api/";
     };
 
 
-    const login=()=>{
+    const login = () => {
+        setLoad(true);
         const configs = { headers: { 'Content-Type': 'application/json' } };
             
 
            let res= axios.post(apiUrl + "adminLogin",query,configs).then((res) => {
                     if (res.status == 200) {
                         sessionStorage.setItem('loggedIn', 'yes');
-                                 router.push("/dashboard")
+                        NotificationManager.success('You are logged in', 'Success');
+                        setLoad(false);
+                        localStorage.setItem('loginEmail', query.email);
+                        router.push("/dashboard")
                                 
                            }
-                        }).catch((err) => {
-                            window.alert(err)
+           }).catch((err) => {
+               setLoad(false);
+                            NotificationManager.error('Username or password is wrong', 'Error');
                         })
                     }
                    
@@ -63,6 +69,7 @@ const apiUrl = "http://localhost:3100/api/";
 
             <main >
                 <div className="container center-container">
+
                     <div className="register-form-container">
                         <div className="reg-details">
                             <h2>Bitte loggen Sie sich als

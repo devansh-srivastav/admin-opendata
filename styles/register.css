@@ -17,7 +17,7 @@ a {
 }
 
 
-.container {
+main .container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -64,9 +64,9 @@ a {
         color: #008ECD;
     }
     @media (min-width: 768px) {
-        .container {
-        width: 750px;
-    }
+        main .container {
+            width: 750px;
+        }
 }
 
 @media (max-width: 1300px) {
@@ -192,6 +192,12 @@ opacity: 0.4;
    padding:0px;
 }
 
+.login-loader{
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
 @media(max-width:768px) {
     .register-form-container{
         max-width:500px;
