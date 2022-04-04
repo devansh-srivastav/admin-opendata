@@ -11,9 +11,9 @@ export default function Header() {
                     <nav className="account not-authed" aria-label="Benutzerkonto">
                         <ul className="list-unstyled">
 
-                            <li><a href="/user/login">Anmeldung</a></li>
+                            <li><a href="http://opendatabayern.de/user/login">Anmeldung</a></li>
 
-                            <li><a className="sub" href="/user/register"><strong>Registrieren</strong></a></li>
+                            <li><a className="sub" href="http://opendatabayern.de/user/register"><strong>Registrieren</strong></a></li>
 
 
                         </ul>
