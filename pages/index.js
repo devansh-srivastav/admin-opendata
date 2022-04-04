@@ -79,7 +79,7 @@ System Administrator ein.</h2>
                         </div>
                         <form method="post" className="dataset-form login-form">
                             <div className="form-group control-medium">
-                                <label className="control-label" for="field-login">
+                                <label className="control-label" htmlFor="field-login">
                                     Benutzername
                 </label>
                                 <div className="controls ">
@@ -97,7 +97,7 @@ System Administrator ein.</h2>
                             </div>
 
                             <div className="form-group control-medium">
-                                <label className="control-label" for="field-login">
+                                <label className="control-label" htmlFor="field-login">
                                     Passwort
                 </label>
                                 <div className="controls ">

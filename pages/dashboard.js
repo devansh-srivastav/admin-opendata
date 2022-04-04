@@ -10,7 +10,7 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 export default function Home() {
     
    
-  let router=useRouter();
+    const router=useRouter();
    //const apiUrl = "http://localhost:3100/api/";
     const apiUrl = "https://registerbackend.opendatabayern.de/api/";
     const [data, setData] = useState([]);
@@ -32,16 +32,17 @@ export default function Home() {
       const configs = { headers: { 'Content-Type': 'application/json' } };
             
 
-           let res= axios.get(apiUrl + "requests").then((res) => {
+      let res= axios.get(apiUrl + "requests").then((res) => {
                     if (res.status == 200) {
                        setData([...res.data.result]);
                         setLoad(false)
                            }
-           }).catch((err) => {
-               setLoad(false)
-                            window.alert(err)
-                        })
-    },[]);
+       }).catch((err) => {
+           setLoad(false)
+           window.alert(err)
+       })
+    }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -78,7 +79,7 @@ export default function Home() {
                       <div className="login-loader" style={loading ? { opacity: 1 } : { opacity: 0 }}> <Image src="/loader.gif" width="35" height="35" alt="" /></div>
 
                       {data.map((data,index)=>{
-                           return(<div className="module-content content-card" id={index} onClick={()=>setInfo(index)}>
+                           return(<div className="module-content content-card" key={index} onClick={()=>setInfo(index)}>
                            <div className="page_primary_action">
                                <strong>Nutzer: {data.name}</strong>
                                <br />
