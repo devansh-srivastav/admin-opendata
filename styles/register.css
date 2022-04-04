@@ -138,22 +138,46 @@ main .container {
     min-width:calc(100% - 25px);
 }
 
-.__react_component_tooltip{
-width: 207px;
+/*.__react_component_tooltip {
+    width: 207px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 150%;*/
+    /* or 20px */
 
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 800;
-font-size: 13px;
-line-height: 150%;
-/* or 20px */
+    /*background: #FFFFFF;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: #000000;
+    padding: 14px;
+}*/
 
-background: #FFFFFF;
-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
+.tooltip {
+    width: 207px !important;
+    font-family: 'Manrope' !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    font-size: 13px !important;
+    line-height: 150% !important;
+    /* or 20px */
 
-color: #000000;
-padding:14px;
+    background-color: #FFFFFF !important;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 4px !important;
+    color: #000000 !important;
+    padding: 14px !important;
+}
+
+.__react_component_tooltip.type-dark {
+    background: #FFFFFF !important;
+}
+
+.__react_component_tooltip.type-dark.place-top:after {
+    background-color: #FFFFFF !important;
+    border-top-style: solid;
+  
 }
 
 .blue-btn{

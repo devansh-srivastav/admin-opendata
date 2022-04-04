@@ -13723,4 +13723,8 @@ div[data-reactroot] {
     display: table !important;
 }
 
+main .register-admin.container{
+    margin-top:0px;
+}
+
 

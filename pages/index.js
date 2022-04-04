@@ -9,8 +9,8 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 
 export default function Home() {
     let router=useRouter();
- //const apiUrl = "https://registerbackend.opendatabayern.de/api/";
-const apiUrl = "http://localhost:3100/api/";
+const apiUrl = "https://registerbackend.opendatabayern.de/api/";
+ //const apiUrl = "http://localhost:3100/api/";
 
     const [query, setQuery] = useState({
         username: "",
