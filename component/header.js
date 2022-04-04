@@ -11,9 +11,9 @@ export default function Header() {
                     <nav className="account not-authed" aria-label="Benutzerkonto">
                         <ul className="list-unstyled">
 
-                            <li><a href="/user/login">Anmeldung</a></li>
+                            <li><a href="http://opendatabayern.de/user/login">Anmeldung</a></li>
 
-                            <li><a className="sub" href="/user/register"><strong>Registrieren</strong></a></li>
+                            <li><a className="sub" href="http://opendatabayern.de/user/register"><strong>Registrieren</strong></a></li>
 
 
                         </ul>
@@ -49,7 +49,7 @@ export default function Header() {
 
                         <form className="section site-search simple-input" action="http://opendatabayern.de/dataset/" method="get">
                             <div className="field bayern-search-field">
-                                <label for="field-sitewide-search">Datensatz-Suche</label>
+                                <label htmlFor="field-sitewide-search">Datensatz-Suche</label>
                                 <input id="field-sitewide-search" type="text" className="form-control nav-search" name="q" placeholder="Suche" aria-label="Datensatz-Suche" />
                                 <button className="btn-search" type="submit" aria-label="Absenden"><i className="fa fa-search"></i></button>
                             </div>
