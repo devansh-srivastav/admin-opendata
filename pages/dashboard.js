@@ -12,7 +12,7 @@ export default function Home() {
    
   let router=useRouter();
    //const apiUrl = "http://localhost:3100/api/";
-    const apiUrl = "https://registerbackend.opendatabayern.de/api/";
+  const apiUrl = "https://register-opendata-backend-7i7aqmgwqq-ey.a.run.app/api/";
     const [data, setData] = useState([]);
     const [loading, setLoad] = useState(false);
 

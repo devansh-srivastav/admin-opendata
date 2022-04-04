@@ -14,7 +14,7 @@ export default function Home() {
 
 
   const openDataUrl = "http://register.opendatabayern.de/password?username=";
-  const apiUrl = "https://registerbackend.opendatabayern.de/api/";
+  const apiUrl = "https://register-opendata-backend-7i7aqmgwqq-ey.a.run.app/api/";
   const ckanUrl = "http://opendatabayern.de/api/3/action/";
   const apikey = "e6cf1719-b1e4-47ec-aa33-a797bdd43858";
 
