@@ -1811,6 +1811,11 @@ ol {
 .list-unstyled {
     padding-left: 0;
     list-style: none;
+    color: #000 !important;
+}
+
+.list-unstyled li a{
+    color: #000 !important;
 }
 
 .list-inline {

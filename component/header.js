@@ -13,7 +13,7 @@ export default function Header() {
 
                             <li><a href="http://opendatabayern.de/user/login">Anmeldung</a></li>
 
-                            <li><a className="sub" href="http://opendatabayern.de/user/register"><strong>Registrieren</strong></a></li>
+                            <li><a className="sub" href="http://register.opendatabayern.de"><strong>Registrieren</strong></a></li>
 
 
                         </ul>
@@ -42,7 +42,7 @@ export default function Header() {
                         <nav className="section navigation">
                             <ul className="nav nav-pills">
 
-                                <li className="active"><a href="http://opendatabayern.de">Startseite</a></li><li><a href="http://opendatabayern.de/dataset/">Daten entdecken</a></li><li><a href="http://opendatabayern.de/about">ber Uns</a></li>
+                                <li className="active"><a href="http://opendatabayern.de">Startseite</a></li><li><a href="http://opendatabayern.de/dataset/">Daten entdecken</a></li><li><a href="http://opendatabayern.de/about">Über Uns</a></li>
 
                             </ul>
                         </nav>
